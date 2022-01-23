@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Глейси</title>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <header class="page-header">
+        <div class="header-wrapper">
+          <nav class="main-navigation">
+            <a class="header-logo" href="https://htmlacademy.ru/">
+             <img src="" alt="Logo Gllacy Shop">
+            </a>
+            <ul class="main-menu">
+              <li class="main-menu-item">
+                <a href="#">Каталог</a>
+               </li>
+              <li class="main-menu-item">
+                <a href="#">Доставка и оплата</a>
+              </li>
+              <li class="main-menu-item">
+                <a href="#">О компании</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="user-menu">   
+            <a class="header-phone-number" href="tel:+78005558628">+7 800 555 86 28</a>
+                <!-- How to put search icon -->
+            <a class="user-menu-link" href="#" title="Поиск">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </a>
+                <!-- What should we put int action attr. for <form>???? -->
+            <form  class="search-form" action="https://echo.htmlacademy.ru" method="get"> 
+              <div class="input-wrapper">
+                <input class="input-field" type="search" name="search" value="Поиск по сайту">
+              </div>	
+            </form>
+            <ul class="user-menu-list">
+              <li class="user-menu-item">
+                <a class="user-menu-link" href="#" title="Вход">Вход</a>
+                  <!-- How to put exit icon in here? -->
+                <div class="user-login">
+                  <!-- same question about action in <form> -->
+                  <form class="user-login-form" action="https://echo.htmlacademy.ru" method="get">
+
+                    <h2 class="user-login-popup-name">Личный кабинет</h2>
+                    <input class="input-field" type="email" name="email" value="email@example.com" required>
+                    <input class="input-field" type="password" name="password" value="Пароль" required>
+                    <div class="user-login-bottom">
+                      <button type="submit" class="btn login-btn">Войти</button>
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Регистрация</a>
+                    </div>  
+                  </form>
+                </div>
+              </li>
+              <li class="user-menu-item">
+                <a class="user-menu-link" href="#" title="Корзина">2 товара</a>
+                <!-- how to put trolley icon in here? -->
+                <div class="user-basket">
+                  <!-- pop-up with 2 products inside the basket -->
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="catalog-page">
+        <header class="catalog-header">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">Главная</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="#">Каталог</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">Сливочное</a>
+            </li>
+          </ul>
+        </header>
+        <section class="catalog-products">
+          <h1>Сливочное мороженное</h1>
+
+          <select class="select-control" name="sorting">
+            <option value="popular-item">по популярности</option>
+          </select>
+
+          <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
+
+            <fieldset class="catalog-filter-group">
+              <!--  how should we make this small slider? -->
+              <legend class="catalog-filter-title">Цена: 100 ₽ – 500 ₽</legend>
+            </fieldset>
+
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Жирность:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <input class="control-input" type="radio" name="fat-range" value="0" id="fat-range-0">
+                  <label for="fat-range-0">0 %</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input" type="radio" name="fat-range" value="10" id="fat-range-10" checked>
+                  <label for="fat-range-10">10 %</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input" type="radio" name="fat-range" value="less 30" id="fat-range-less-30">
+                  <label for="fat-range-less-30">до 30 %</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input"  type="radio" name="fat-range" value="more 30" id="fat-range-more-30">
+                  <label for="fat-range-more-30">выше 30 %</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Наполнители:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <input class="control-input"  type="checkbox" name="fillers" value="chocolate" id="chocolate-filler" checked>
+                  <label for="chocolate-filler">шоколадные</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input"  type="checkbox" name="fillers" value="sugar" id="sugar-filler" checked>
+                  <label for="sugar-filler">сахарные посыпки</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input"  type="checkbox" name="fillers" value="fruit" id="fruit-filler">
+                  <label for="fruit-filler">фрукты</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input"  type="checkbox" name="fillers" value="syrup" id="syrup-filler">
+                  <label for="syrup-filler">сиропы</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input"  type="checkbox" name="fillers" value="jam" id="jam-filler">
+                  <label for="jam-filler">джемы</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button" type="submit">Применить</button>
+          </form>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Малинка">
+              <h3 class="product-card-title">Малинка</h3>
+            </a>
+            <p>Сливочное мороженое с малиновым джемом</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">310 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Фисташка">
+              <h3 class="product-card-title">Фисташка</h3>
+            </a>
+            <p>Фисташковый пломбир с кусочками шоколада</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">340 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Черника">
+              <h3 class="product-card-title">Черника</h3>
+            </a>
+            <p>Крем-брюле<br>с черничным джемом</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">330 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Бабл-гам">
+              <h3 class="product-card-title">Бабл-гам</h3>
+            </a>
+            <p>Ванильный пломбир со сладкой посыпкой</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">320 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Ежевика">
+              <h3 class="product-card-title">Ежевика</h3>
+            </a>
+            <p>Сливочное мороженое с ежевичным джемом</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">330 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Банан">
+              <h3 class="product-card-title">Банан</h3>
+            </a>
+            <p>Сливочный пломбир с банановым вкусом</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">340 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Шоколадка">
+              <h3 class="product-card-title">Шоколадка</h3>
+            </a>
+            <p>Классический шоколадный пломбир</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">270 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Клубничка">
+              <h3 class="product-card-title">Клубничка</h3>
+            </a>
+            <p>Сливочный пломбир с клубничным вкусом</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">300 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Лимон">
+              <h3 class="product-card-title">Лимон</h3>
+            </a>
+            <p>Освежающий лимонный сорбет</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">310 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Ментол">
+              <h3 class="product-card-title">Ментол</h3>
+            </a>
+            <p>Сливочный пломбир с ментоловым сиропом</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">320 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Орешек">
+              <h3 class="product-card-title">Орешек</h3>
+            </a>
+            <p>Фисташковый пломбир с шоколадным сиропом</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">360 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="Крем-брюле">
+              <h3 class="product-card-title">Крем-брюле</h3>
+            </a>
+            <p>Классическое крем-брюле</p>
+            <div class="product-card-footer">
+              <b class="product-card-price">280 ₽/кг</b>
+              <a href="#" class="product-card-button button">
+                <svg></svg>
+              </a>
+            </div>
+          </div>
+          
+          <button class="button pagination-show-more" type="button">Показать ещё</button>
+
+          <ul class="pagination">
+          
+            <li class="pagination-item">
+              <a class="pagination-link pagination-current">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">4</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">5</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link pagination-next" href="#">
+                <span class="visually-hidden">Следующая страница</span>
+              </a>
+            </li>
+          </ul>
+      
+        </section>
+      </main>
+
+      <footer class="page-footer">
+
+        <section class="page-footer-social">
+          <h2 class="visually-hidden">Мы в социальных сетях</h2>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="social-btn social-btn-vk" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-btn social-btn-fb" href="https://www.facebook.com/htmlacademy">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-btn social-btn-inst" href="https://www.instagram.com/htmlacademy/">
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer-navigation">
+          <h2 class="visually-hidden">Дополнительно о нас</h2>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <svg></svg>
+              <a class="footer-nav-link for-suppliers" href="#">Для поставщиков</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-nav-link">Наши документы</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-nav-link">О производстве</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-nav-link">Экологические стандарты</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="copyright">
+          <h2 class="visually-hidden">Копирайт</h2>
+          <!-- NOT IMG!!! -->
+          <svg></svg>
+          <p class="copyright-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a> &commat; 2021</p>
+        </section>
+
+      </footer>
+
+    </div>
+
+  </body>
+</html>
