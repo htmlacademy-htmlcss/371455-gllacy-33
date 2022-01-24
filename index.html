@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -11,7 +12,7 @@
       <header class="page-header">
         <div class="header-wrapper">
           <nav class="main-navigation">
-            <a class="header-logo" href="https://htmlacademy.ru/">
+            <a class="header-logo">
              <img src="" alt="Logo Gllacy Shop">
             </a>        
             <ul class="main-menu">
@@ -72,73 +73,75 @@
       <main class="index-page">
         <h1 class="visually-hidden">Магазин мороженного «Глейси»</h1>
         
-        <section class="main-slider">
+        <div class="slider-outer">
+          <div class="slider-inner" data-current-slide="1"></div>
           <!-- I will put 3 slider pages in div now - but i am not sure if this is right -->
-          <div class="first-slider">
-            <h2 class="slider-header">Нежный пломбир с клубничным джемом</h2>
-            <p>Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-            <a class="slider-button" type="button" href="#">Заказать</a>
-            <img class="slider-image" src="" alt="Нежный пломбир с клубничным джемом">
-          </div>
+            <div class="slide-item">
+              <h2 class="slider-header">Нежный пломбир с клубничным джемом</h2>
+              <p>Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
+              <a class="slider-button" type="button" href="#">Заказать</a>
+              <img class="slider-image" src="" alt="Нежный пломбир с клубничным джемом">
+            </div>
 
-          <div class="second-slider">
-            <h2 class="slider-header">Сливочное мороженое со вкусом банана</h2>
-            <p>Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
-            <a class="slider-button" type="button" href="#">Заказать</a>
-            <img class="slider-image" src="" alt="Сливочное мороженое со вкусом банана">
-          </div>
+            <div class="slide-item">
+              <h2 class="slider-header">Сливочное мороженое со вкусом банана</h2>
+              <p>Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
+              <a class="slider-button" type="button" href="#">Заказать</a>
+              <img class="slider-image" src="" alt="Сливочное мороженое со вкусом банана">
+            </div>
 
-          <div class="third-slider">
-            <h2 class="slider-header">Карамельный пломбир с маршмеллоу</h2>
-            <p>Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
-            <a class="slider-button" type="button" href="#">Заказать</a>
-            <img class="slider-image" src="" alt="Карамельный пломбир с маршмеллоу">
-          </div>
+            <div class="slide-item">
+              <h2 class="slider-header">Карамельный пломбир с маршмеллоу</h2>
+              <p>Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
+              <a class="slider-button" type="button" href="#">Заказать</a>
+              <img class="slider-image" src="" alt="Карамельный пломбир с маршмеллоу">
+            </div>
           
-          <button class="slider-button slider-prev" type="button">
-            <span class="visually-hidden">Предыдущий слайд</span>
-          </button>
-          <button class="slider-button slider-next" type="button">
-            <span class="visually-hidden">Следующий слайд</span>
-          </button>
-          <ol class="slider-pagination">
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                <span class="visually-hidden">1 слайд</span>
-              </button>
-            </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">2 слайд</span>
-              </button>
-            </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">3 слайд</span>
-              </button>
-            </li>
-          </ol>       
-          <div class="slider-soial">
-            <ul class="footer-social-list">
-              <li class="footer-social-item">
-                <a class="social-btn social-btn-vk" href="#">
-                  <span class="visually-hidden">ВКонтакте</span>
-                </a>
+            <button class="slider-prev-button" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
+            <button class="slider-next-button" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+            </button>
+            
+            <ol class="slider-pagination">
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                  <span class="visually-hidden">1 слайд</span>
+                </button>
               </li>
-              <li class="footer-social-item">
-                <a class="social-btn social-btn-fb" href="#">
-                  <span class="visually-hidden">Фейсбук</span>
-                </a>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">2 слайд</span>
+                </button>
               </li>
-              <li class="footer-social-item">
-                <a class="social-btn social-btn-inst" href="#">
-                  <span class="visually-hidden">Инстаграм</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">3 слайд</span>
+                </button>
+             </li>
+            </ol>       
+            <div class="slider-soial">
+              <ul class="footer-social-list">
+                <li class="footer-social-item">
+                  <a class="social-btn social-btn-vk" href="#">
+                    <span class="visually-hidden">ВКонтакте</span>
+                  </a>
+                </li>
+                <li class="footer-social-item">
+                  <a class="social-btn social-btn-fb" href="#">
+                    <span class="visually-hidden">Фейсбук</span>
+                  </a>
+                </li>
+                <li class="footer-social-item">
+                  <a class="social-btn social-btn-inst" href="#">
+                    <span class="visually-hidden">Инстаграм</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-        </section>
+        </div>
 
         <section class="shop-promo">
 
