@@ -4,74 +4,99 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
-    <div class="container">
-
+    <div class="page-header-wrapper">
       <header class="page-header">
-        <div class="header-wrapper">
-          <nav class="main-navigation">
-            <a class="header-logo" href="index.html">
-             <img src="" alt="Logo Gllacy Shop">
-            </a>
-            <ul class="main-menu">
-              <li class="main-menu-item">
-                <a class="main-menu-link main-menu-link current" href="#">Каталог</a>
-               </li>
-              <li class="main-menu-item">
-                <a href="#">Доставка и оплата</a>
-              </li>
-              <li class="main-menu-item">
-                <a href="#">О компании</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="user-menu">   
-            <a class="header-phone-number" href="tel:+78005558628">+7 800 555 86 28</a>
-                <!-- How to put search icon -->
-            <a class="user-menu-link" href="#" title="Поиск">
-              <span class="visually-hidden">Поиск по сайту</span>
-            </a>
-                <!-- What should we put int action attr. for <form>???? -->
-            <form  class="search-form" action="https://echo.htmlacademy.ru" method="get"> 
-              <div class="input-wrapper">
-                <input class="input-field" type="search" name="search" value="Поиск по сайту">
-              </div>	
-            </form>
-            <ul class="user-menu-list">
-              <li class="user-menu-item">
-                <a class="user-menu-link" href="#" title="Вход">Вход</a>
-                  <!-- How to put exit icon in here? -->
-                <div class="user-login">
-                  <!-- same question about action in <form> -->
-                  <form class="user-login-form" action="https://echo.htmlacademy.ru" method="get">
-
-                    <h2 class="user-login-popup-name">Личный кабинет</h2>
-                    <input class="input-field" type="email" name="email" value="email@example.com" required>
-                    <input class="input-field" type="password" name="password" value="Пароль" required>
-                    <div class="user-login-bottom">
-                      <button type="submit" class="btn login-btn">Войти</button>
-                      <a href="#">Забыли пароль?</a>
-                      <a href="#">Регистрация</a>
-                    </div>  
-                  </form>
+        <nav class="header-navigation">
+          <a class="header-logo" href="index.html">
+            <img src="" alt="Logo Gllacy Shop">
+          </a>        
+          <ul class="site-nav-list">
+            <li class="site-nav-item">
+              <a href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="#">Доставка и оплата</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="#">О компании</a>
+            </li>
+          </ul>
+          <ul class="user-nav-list">
+            <li class="user-nav-item">
+              <a class="header-phone-number" href="tel:+78005558628">+7 800 555 86 28
+                <span class="visually-hidden">Телефон организации</span>
+              </a>
+            </li>
+            <li class="user-nav-item">
+              <a class="user-menu-link" href="#" title="Поиск">
+                <svg></svg>
+                <span class="visually-hidden">Поиск по сайту</span>
+              </a>
+              <form  class="search-form" action="https://echo.htmlacademy.ru" method="get"> 
+                <p class="input-wrapper">
+                  <input class="input-field" type="search" name="search" placeholder="Поиск по сайту">
+                </p>
+              </form>
+            </li>
+            <li class="user-nav-item">
+              <a class="user-menu-link" href="#" title="Вход">
+                <svg></svg>
+                Вход
+              </a>
+              <div class="user-login">
+                <form class="user-login-form" action="https://echo.htmlacademy.ru" method="get">
+                  <h2 class="user-login-popup-name">Личный кабинет</h2>
+                  <p>
+                    <input class="input-field" type="email" name="email" placeholder="email@example.com" required>
+                  </p>
+                  <p>
+                    <input class="input-field" type="password" name="password" placeholder="Пароль" required>
+                  </p>
+                  <div class="user-login-bottom">
+                    <button type="submit" class="login-batton">Войти</button>
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Регистрация</a>
+                  </div>  
+                </form>
+              </div>
+            </li>
+            <li class="user-nav-item">
+              <a class="user-menu-link" href="#" title="Корзина">
+                <svg></svg>
+                2 товара
+              </a>
+              <div class="user-basket">
+                <h2>Корзина</h2>
+                <div class="basket-item">
+                  <img src="" alt="Мороженное малинка">
+                  <h3>Малинка</h3>
+                  <span>1 кг х 310 ₽</span>
+                  <span>310 ₽</span>
+                  <svg></svg>
                 </div>
-              </li>
-              <li class="user-menu-item">
-                <a class="user-menu-link" href="#" title="Корзина">2 товара</a>
-                <!-- how to put trolley icon in here? -->
-                <div class="user-basket">
-                  <!-- pop-up with 2 products inside the basket -->
+                <div class="basket-item">
+                  <img src="" alt="Мороженное бабл-гам">
+                  <h3>Бабл-гам</h3>
+                  <span>1,5 кг х 320 ₽</span>
+                  <span>480 ₽</span>
+                  <svg></svg>
                 </div>
-              </li>
-            </ul>
-          </nav>
-        </div>
+                <a href="" type="button">Оформить заказ</a>
+                <span>Итого 790₽</span>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </header>
+    </div>
 
-      <main class="catalog-page">
+    <main class="catalog-page">
+      <div class="catalog-header-wrapper">
         <header class="catalog-header">
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
@@ -84,21 +109,22 @@
               <a class="breadcrumbs-link">Сливочное</a>
             </li>
           </ul>
+          <h2>Сливочное мороженое</h2>
         </header>
-        <section class="catalog-products">
-          <h1>Сливочное мороженное</h1>
+      </div>
 
-          <select class="select-control" name="sorting">
-            <option value="popular-item">по популярности</option>
-          </select>
-
+      <section class="catalog-products">
+        <h2 class="visually-hidden">Фильтр продукции</h2>
+        <div class="filters-wrapper">
           <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
-
+            <select class="select-control" name="sorting">
+              <option value="popular-item">По популярности</option>
+            </select>
+              <!-- slider dont know how to do -->
             <fieldset class="catalog-filter-group">
-              <!--  how should we make this small slider? -->
               <legend class="catalog-filter-title">Цена: 100 ₽ – 500 ₽</legend>
             </fieldset>
-
+  
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Жирность:</legend>
               <ul class="catalog-filter-list">
@@ -120,7 +146,7 @@
                 </li>
               </ul>
             </fieldset>
-
+  
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Наполнители:</legend>
               <ul class="catalog-filter-list">
@@ -148,179 +174,218 @@
             </fieldset>
             <button class="button" type="submit">Применить</button>
           </form>
+        </div>
 
-          <div class="product-card">
+        <div class="product-catalog-wrapper">
+          <h2 class="visually-hidden">Каталог продукции магазина мороженного</h2>
+
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Малинка">
-              <h3 class="product-card-title">Малинка</h3>
             </a>
-            <p>Сливочное мороженое с малиновым джемом</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Малинка</h3>
+              <p>Сливочное мороженое с малиновым джемом</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">310 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Фисташка">
-              <h3 class="product-card-title">Фисташка</h3>
             </a>
-            <p>Фисташковый пломбир с кусочками шоколада</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Фисташка</h3>
+              <p>Фисташковый пломбир с кусочками шоколада</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">340 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Черника">
-              <h3 class="product-card-title">Черника</h3>
             </a>
-            <p>Крем-брюле<br>с черничным джемом</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Черника</h3>
+              <p>Крем-брюле с черничным джемом</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">330 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Бабл-гам">
-              <h3 class="product-card-title">Бабл-гам</h3>
             </a>
-            <p>Ванильный пломбир со сладкой посыпкой</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Бабл-гам</h3>
+              <p>Ванильный пломбир со сладкой посыпкой</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">320 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Ежевика">
-              <h3 class="product-card-title">Ежевика</h3>
             </a>
-            <p>Сливочное мороженое с ежевичным джемом</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Ежевика</h3>
+              <p>Сливочное мороженое с ежевичным джемом</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">330 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Банан">
-              <h3 class="product-card-title">Банан</h3>
             </a>
-            <p>Сливочный пломбир с банановым вкусом</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Банан</h3>
+              <p>Сливочный пломбир с банановым вкусом</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">340 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Шоколадка">
-              <h3 class="product-card-title">Шоколадка</h3>
             </a>
-            <p>Классический шоколадный пломбир</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Шоколадка</h3>
+              <p>Классический шоколадный пломбир</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">270 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Клубничка">
-              <h3 class="product-card-title">Клубничка</h3>
             </a>
-            <p>Сливочный пломбир с клубничным вкусом</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Клубничка</h3>
+              <p>Сливочный пломбир с клубничным вкусом</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">300 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Лимон">
-              <h3 class="product-card-title">Лимон</h3>
             </a>
-            <p>Освежающий лимонный сорбет</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Лимон</h3>
+              <p>Освежающий лимонный сорбет</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">310 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Ментол">
-              <h3 class="product-card-title">Ментол</h3>
             </a>
-            <p>Сливочный пломбир с ментоловым сиропом</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Ментол</h3>
+              <p>Сливочный пломбир с ментоловым сиропом</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">320 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Орешек">
-              <h3 class="product-card-title">Орешек</h3>
             </a>
-            <p>Фисташковый пломбир с шоколадным сиропом</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Орешек</h3>
+              <p>Фисташковый пломбир с шоколадным сиропом</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">360 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="product-card">
+          <article class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="Крем-брюле">
-              <h3 class="product-card-title">Крем-брюле</h3>
             </a>
-            <p>Классическое крем-брюле</p>
+            <a class="product-card-link" href="#">
+              <h3 class="product-card-title">Крем-брюле</h3>
+              <p>Классическое крем-брюле</p>
+            </a>
             <div class="product-card-footer">
               <b class="product-card-price">280 ₽/кг</b>
               <a href="#" class="product-card-button button">
                 <svg></svg>
+                <span class="visually-hidden">В корзину</span>
               </a>
             </div>
-          </div>
-          
+          </article>
+
           <button class="button pagination-show-more" type="button">Показать ещё</button>
 
           <ol class="pagination">
-          
             <li class="pagination-item">
               <a class="pagination-link pagination-current">1</a>
             </li>
@@ -342,12 +407,12 @@
               </a>
             </li>
           </ol>
-      
-        </section>
-      </main>
+        </div>        
+      </section>
+    </main>
 
+    <div class="page-footer-wrapper">
       <footer class="page-footer">
-
         <section class="page-footer-social">
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul class="footer-social-list">
@@ -368,7 +433,7 @@
             </li>
           </ul>
         </section>
-
+  
         <section class="footer-navigation">
           <h2 class="visually-hidden">Дополнительно о нас</h2>
           <ul class="footer-list">
@@ -387,17 +452,16 @@
             </li>
           </ul>
         </section>
-
+  
         <section class="copyright">
-          <h2 class="visually-hidden">Копирайт</h2>
-          <!-- NOT IMG!!! -->
-          <svg></svg>
-          <p class="copyright-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a> &commat; 2021</p>
+          <h2 class="visually-hidden">Авторские права</h2>
+          <a href="https://htmlacademy.ru/">
+            <svg></svg>
+            <span class="visually-hidden">Логотип HTML Academy</span>
+          </a>
+          <p class="copyright-text">Сделано в <a href="https://htmlacademy.ru/">.html academy</a> &commat; 2021</p>
         </section>
-
       </footer>
-
     </div>
-
   </body>
 </html>
