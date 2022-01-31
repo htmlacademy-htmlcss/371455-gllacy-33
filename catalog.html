@@ -13,17 +13,17 @@
       <header class="page-header">
         <nav class="header-navigation">
           <a class="header-logo" href="index.html">
-            <img src="" alt="Logo Gllacy Shop">
+            <img src="images/logo.svg" width="137" height="56" alt="Logo Gllacy Shop">
           </a>        
           <ul class="site-nav-list">
             <li class="site-nav-item">
-              <a href="catalog.html">Каталог</a>
+              <a class="site-nav-link" href="catalog.html">Каталог</a>
             </li>
             <li class="site-nav-item">
-              <a href="#">Доставка и оплата</a>
+              <a  class="site-nav-link" href="#">Доставка и оплата</a>
             </li>
             <li class="site-nav-item">
-              <a href="#">О компании</a>
+              <a  class="site-nav-link" href="#">О компании</a>
             </li>
           </ul>
           <ul class="user-nav-list">
@@ -73,14 +73,14 @@
               <div class="user-basket">
                 <h2>Корзина</h2>
                 <div class="basket-item">
-                  <img src="" alt="Мороженное малинка">
+                  <img class="product-card-image-basket" src="images/product-cards/product-card-raspberry-photo.jpg" width="46" height="46" alt="Мороженное малинка">
                   <h3>Малинка</h3>
                   <span>1 кг х 310 ₽</span>
                   <span>310 ₽</span>
                   <svg></svg>
                 </div>
                 <div class="basket-item">
-                  <img src="" alt="Мороженное бабл-гам">
+                  <img class="product-card-image-basket" src="images/product-cards/product-card-bubblegum-photo.jpg" width="46" height="46" alt="Мороженное бабл-гам">
                   <h3>Бабл-гам</h3>
                   <span>1,5 кг х 320 ₽</span>
                   <span>480 ₽</span>
@@ -117,7 +117,8 @@
         <h2 class="visually-hidden">Фильтр продукции</h2>
         <div class="filters-wrapper">
           <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
-            <select class="select-control" name="sorting">
+            <label for="sorting-field">Сортировка:</label>
+            <select class="select-control" id="sorting-field" name="sorting">Сортировка
               <option value="popular-item">По популярности</option>
             </select>
               <!-- slider dont know how to do -->
@@ -181,7 +182,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Малинка">
+              <img class="product-card-image" src="images/product-cards/product-card-raspberry-photo.jpg" alt="Малинка">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Малинка</h3>
@@ -198,7 +199,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Фисташка">
+              <img class="product-card-image" src="images/product-cards/product-card-pistachio-photo.jpg" alt="Фисташка">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Фисташка</h3>
@@ -215,7 +216,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Черника">
+              <img class="product-card-image" src="images/product-cards/product-card-blueberry-photo.jpg" alt="Черника">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Черника</h3>
@@ -232,7 +233,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Бабл-гам">
+              <img class="product-card-image" src="images/product-cards/product-card-bubblegum-photo.jpg" alt="Бабл-гам">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Бабл-гам</h3>
@@ -249,7 +250,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Ежевика">
+              <img class="product-card-image" src="images/product-cards/product-card-blackberry-photo.jpg" alt="Ежевика">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Ежевика</h3>
@@ -266,7 +267,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Банан">
+              <img class="product-card-image" src="images/product-cards/product-card-banana-photo.jpg" alt="Банан">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Банан</h3>
@@ -283,7 +284,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Шоколадка">
+              <img class="product-card-image" src="images/product-cards/product-card-chocolate-photo.jpg" alt="Шоколадка">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Шоколадка</h3>
@@ -300,7 +301,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Клубничка">
+              <img class="product-card-image" src="images/product-cards/product-card-strawberry-photo.jpg" alt="Клубничка">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Клубничка</h3>
@@ -317,7 +318,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Лимон">
+              <img class="product-card-image" src="images/product-cards/product-card-lemon-photo.jpg" alt="Лимон">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Лимон</h3>
@@ -334,7 +335,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Ментол">
+              <img class="product-card-image" src="images/product-cards/product-card-mentol-photo.jpg" alt="Ментол">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Ментол</h3>
@@ -351,7 +352,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Орешек">
+              <img class="product-card-image" src="images/product-cards/product-card-nut-photo.jpg" alt="Орешек">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Орешек</h3>
@@ -368,7 +369,7 @@
 
           <article class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="Крем-брюле">
+              <img class="product-card-image" src="images/product-cards/product-card-cream-photo.jpg" alt="Крем-брюле">
             </a>
             <a class="product-card-link" href="#">
               <h3 class="product-card-title">Крем-брюле</h3>
@@ -387,7 +388,15 @@
 
           <ol class="pagination">
             <li class="pagination-item">
-              <a class="pagination-link pagination-current">1</a>
+              <a class="pagination-link pagination-prev pagination-disabled">
+                <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.8034 3.8052a.665.665 0 0 0-.9405-.9404l-4.668 4.668a.665.665 0 0 0 .0009.9414l4.668 4.6681a.665.665 0 0 0 .9405-.9404L5.6055 8.0031l4.1978-4.1979Z" fill="#FCFCFC"/></svg>
+                <span class="visually-hidden">Предыдущая страница</span>
+              </a>
+            </li>
+            <li class="pagination-item">
+              <div class="pagination-current">
+                <a class="pagination-link pagination-current">1</a>
+              </div>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">2</a>
@@ -433,12 +442,14 @@
             </li>
           </ul>
         </section>
-  
+
         <section class="footer-navigation">
           <h2 class="visually-hidden">Дополнительно о нас</h2>
           <ul class="footer-list">
             <li class="footer-item">
-              <svg></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.8909 1.99447C12.5504 1.65381 12.1461 1.38357 11.7011 1.19919C11.2562 1.01482 10.7792 0.919922 10.2976 0.919922C9.8159 0.919922 9.33896 1.01482 8.89399 1.19919C8.44901 1.38357 8.04473 1.65381 7.70422 1.99447L6.99756 2.70114L6.29089 1.99447C5.6031 1.30668 4.67025 0.920278 3.69756 0.920278C2.72487 0.920278 1.79202 1.30668 1.10422 1.99447C0.416428 2.68227 0.0300293 3.61512 0.0300293 4.58781C0.0300293 5.56049 0.416428 6.49334 1.10422 7.18114L1.81089 7.88781L6.99756 13.0745L12.1842 7.88781L12.8909 7.18114C13.2316 6.84064 13.5018 6.43635 13.6862 5.99138C13.8705 5.5464 13.9654 5.06946 13.9654 4.58781C13.9654 4.10615 13.8705 3.62921 13.6862 3.18424C13.5018 2.73926 13.2316 2.33498 12.8909 1.99447Z" fill="#2D3440"/>
+              </svg>                
               <a class="footer-nav-link for-suppliers" href="#">Для поставщиков</a>
             </li>
             <li class="footer-item">
@@ -452,11 +463,11 @@
             </li>
           </ul>
         </section>
-  
+
         <section class="copyright">
           <h2 class="visually-hidden">Авторские права</h2>
           <a href="https://htmlacademy.ru/">
-            <svg></svg>
+            <img class="htmlacademy-logo" src="/images/logo_htmlacademy.svg" width= "93px" height="26.71px" alt="HTML-Academy logo">
             <span class="visually-hidden">Логотип HTML Academy</span>
           </a>
           <p class="copyright-text">Сделано в <a href="https://htmlacademy.ru/">.html academy</a> &commat; 2021</p>
