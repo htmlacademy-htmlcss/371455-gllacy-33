@@ -1,0 +1,375 @@
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/inter-400.woff2") format("woff2");
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/inter-700.woff2") format("woff2");
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    src: url("/fonts/inter-900.woff2") format("woff2");
+  }
+
+body{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: #FEAFC3;
+    color: #2D3440;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  /* class="button"*/
+
+  .button{
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+  }
+
+/* HEADER */
+.site-nav-item{
+    list-style-type: none;
+}
+
+.site-nav-link{
+    line-height: 20px;
+    color: #2D3440;
+    text-align: center;
+    text-decoration: none;
+}
+
+.user-nav-item{
+    list-style-type: none;
+}
+
+.user-nav-item a{
+    font-size: 14px;
+    line-height: 20px;
+    color: #2D3440;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header-phone-number{
+    font-weight: 700;
+}
+
+.empty-user-basket{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+
+/* HERO SLIDER */
+.hero-slide-item{
+    list-style-type: none;
+}
+
+.slide-header{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.hero-slide-item p{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/* SHOP PROMO */
+
+.section-title{
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.promo h3{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.promo{
+    display: inline-block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 268px;
+    background-color:#FF7799;
+}
+
+.raspberry-promo{
+    background-image: url(/images/raspberrry-promo.png);
+}
+
+.marshmallow-promo{
+    background-image: url(/images/marshmallow-promo.png);
+}
+
+/* POPULAR FLAVORS */
+
+.product-card{
+    background-color: #FCFCFC;
+    border-radius: 8px;
+}
+
+.product-card-link{
+    text-decoration: none;
+    color: #2D3440;
+}
+
+.product-card-link h3{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.product-card-link p{
+    color: #565C66;
+    text-align: center;
+}
+
+.product-card-image{
+    border-radius: 50%;
+    box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+    /* center the img */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-card-price{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+/* ADVANTAGES */
+.advantages-wrapper{
+    background-image: url(/images/advantages-background.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-radius: 16px;
+    /* width: 1170px;
+    height: 480px; */
+    background-color: #e7d8b8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+/* NEED to add white block */
+
+/* .advantages-base{
+    background-color: #FCFCFC;
+    border-radius: 16px;
+    width: 1122px;
+    height: 432px;
+} */
+
+.advantages-item{
+    list-style-type: none;
+}
+
+.advantages-item p{
+    color: #565C66;
+}
+
+/* news*/
+.blog-news{
+    background-image: url(/images/blog-bews-background.jpeg);
+    background-color: rgb(240, 88, 88);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    /* width: 570px;
+    height: 220px; */
+}
+
+.blog-news p{
+    color: #565C66;
+    line-height: 20px;
+}
+
+.blog-news-link{
+    text-decoration: none;
+    color: #2D3440;
+}
+
+.blog-news-link h2{
+    font-size: 24px;
+    line-height: 30px;
+}
+
+/* subscribtions */
+.subscribtion-block{
+    background-image: url(/images/subscribtion-background.png);
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    /* width: 570px;
+    height: 220px; */
+}
+
+.subscribtion-block p{
+    color: #565C66;
+}
+
+/* DELIVERY */
+.delivery-wrapper{
+    background-image: url(/images/delivery-background.jpeg);
+    background-color: rgb(238, 77, 77);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    /* width: 1170px;
+    height: 534px; */
+}
+
+.delivery-text .section-title{
+    text-align: left;
+}
+
+.delivery p{
+    color: #565C66;
+}
+
+.delivery-form label{
+    line-height: 20px;
+    font-weight: 700;
+    color: #2D3440;
+}
+
+/* CONTACTs */
+.contacts-address {
+    font-style: normal;
+  }
+
+.contacts-address p{
+    color: #565C66;
+  }
+
+.contacts-address b{
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+.company-phone-number{
+    text-decoration: none;
+    color: #2D3440;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+.company-shedule{
+      font-size: 14px;
+      line-height: 20px;
+  }
+
+  /* FOOTER */
+.footer-item, .footer-social-list{
+    list-style-type: none;
+}
+
+.footer-nav-link{
+    text-decoration: none;
+    color: #2D3440;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.for-suppliers{
+    font-weight: 700;
+}
+
+.copyright-text a{
+    text-decoration: none;
+    color: #2D3440;
+    border-bottom: 1px solid rgba(45,52,64,0.5);
+}
+
+/* CATALOG PAGE */
+
+/* header */
+
+.product-card-image-basket{
+    border-radius: 50%;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+    color: #2D3440;
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+  
+.breadcrumbs-link {
+    color: inherit;
+}
+
+.catalog-header h2{
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 46px;
+}
+
+/* FILTERS */
+.catalog-filters{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* PRODUCT CARDS */
+
+/* PAGINATION */
+.pagination{
+    list-style-type: none;
+}
+
+.pagination-link {
+    color: #2D3440;
+    text-decoration: none;
+    line-height: 20px;
+  }
+  
+  .pagination-current {
+    background-color: #FCFCFC;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  
+  .pagination-disabled {
+    opacity: 0.2;
+  }
