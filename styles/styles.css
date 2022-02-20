@@ -303,20 +303,20 @@ body
 
 .hero
 {
-    /* position: relative; */
+    position: relative;
     margin-bottom: 80px;
 }
 
-.hero input
+.hero input[type="radio"]
 {
     display: none;
 }
 
 .hero-wrapper
 {
-    /* position: relative; */
+    position: relative;
     padding-top: 11px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .hero-slide-list
@@ -329,6 +329,8 @@ body
     padding: 0;
 
     list-style-type: none;
+    width: 300%;
+    transition: transform 0.8s ease;
 }
 
 .hero-slide-item
@@ -336,6 +338,8 @@ body
     display: flex;
 
     align-items: center;
+
+    float: left;
 }
 
 .slide-information
@@ -444,6 +448,7 @@ body
     list-style-type: none;
 
     justify-content: flex-start;
+    text-align: center;
 }
 
 .slider-togglers-item:not(:last-child)
@@ -451,40 +456,36 @@ body
     margin-right: 8px;
 }
 
-.toggler-button
+.slider-togglers label
 {
+    display: inline-block;
     width: 12px;
     height: 12px;
-
-    border: none;
+    cursor: pointer;
     border-radius: 50%;
-    background-color: #fcfcfc;
+    background-color: rgba(252, 252, 252, 0.3);
 }
 
-.toggler-button:not(.toggler-button-current)
-{
-    opacity: .3;
+#slide-1:checked ~ .hero-wrapper .slider-footer .slider-togglers .slider-togglers-item label[for="slide-1"],
+#slide-2:checked ~ .hero-wrapper .slider-footer .slider-togglers .slider-togglers-item label[for="slide-2"],
+#slide-3:checked ~ .hero-wrapper .slider-footer .slider-togglers .slider-togglers-item label[for="slide-3"]
+ {  
+    background-color: rgba(252, 252, 252);
 }
 
-.hero-slide-2,
-.hero-slide-3
-{
-    display: none;
-}
+#slide-1:checked ~ .hero-wrapper .hero-slide-list .hero-slide-1 {
+    transform: translate(0);
+  }
 
-#slide-1:checked ~ .hero-slide-list li:nth-of-type(1),
-#slide-2:checked ~ .hero-slide-list li:nth-of-type(2),
-#slide-3:checked ~ .hero-slide-list li:nth-of-type(3)
-{
-    display: block;
-}
+  #slide-2:checked ~ .hero-wrapper .hero-slide-list .hero-slide-2 {
+    transform: translate(-1170px);
+  }
 
-#slide-1:checked ~ .slider-togglers li:nth-of-type(1) label,
-#slide-2:checked ~ .slider-togglers li:nth-of-type(2) label,
-#slide-3:checked ~ .slider-togglers li:nth-of-type(3) label
-{
-    color: red;
-}
+  #slide-3:checked ~ .hero-wrapper .hero-slide-list .hero-slide-3 {
+    transform: translate(-2340px);
+  }
+
+
 
 /* SHOP PROMO */
 

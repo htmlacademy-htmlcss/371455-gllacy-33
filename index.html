@@ -90,11 +90,12 @@
     <main class="index-page main-container">
       <h1 class="visually-hidden">Магазин мороженного «Глейси»</h1>
       <section class="hero">
-        <input class="slider-input" type="radio" id="slide-1" name="switch">
-        <input class="slider-input" type="radio" id="slide-2" name="switch">
-        <input class="slider-input" type="radio" id="slide-3" name="switch">
+        <input class="slider-input" type="radio" id="slide-1" name="switch" checked>
+          <input class="slider-input" type="radio" id="slide-2" name="switch">
+          <input class="slider-input" type="radio" id="slide-3" name="switch">
         <h2 class="visually-hidden">Промо-товары магазина</h2>
         <div class="hero-wrapper wrapper">
+          
           <ul class="hero-slide-list">
             <li class="hero-slide-item hero-slide-1">
               <div class="slide-information">
@@ -193,24 +194,18 @@
           <div class="slider-footer">
             <ol class="slider-togglers">
               <li class="slider-togglers-item">
-                <label for="slide-1" class="toggler togglers-current">
-                  <button class="toggler-button toggler-button-current" type="button">
+                <label for="slide-1">
                     <span class="visually-hidden">1 слайд</span>
-                  </button>
                 </label>
               </li>
               <li class="slider-togglers-item">
-                <label for="slide-2" class="toggler">
-                  <button class="toggler-button" type="button">
+                <label for="slide-2">
                     <span class="visually-hidden">2 слайд</span>
-                  </button>
                 </label>
               </li>
               <li class="slider-togglers-item">
-                <label for="slide-3" class="toggler">
-                  <button class="toggler-button" type="button">
+                <label for="slide-3">
                     <span class="visually-hidden">3 слайд</span>
-                  </button>
                 </label>
              </li>
             </ol> 
