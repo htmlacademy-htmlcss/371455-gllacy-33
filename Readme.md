@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Виктория Мохна](https://up.htmlacademy.ru/htmlcss/33/user/371455).
-* Наставник: [Александр Григорьев](https://up.htmlacademy.ru/htmlcss/33/user/43108).
+* Наставник: [Кирьян Горячев](https://up.htmlacademy.ru/htmlcss/33/user/578191).
 
 ---
 
