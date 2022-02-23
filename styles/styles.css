@@ -1,31 +1,26 @@
-@font-face
-{
-    font-family: 'Inter';
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/inter-400.woff2") format("woff2");
+    font-style: normal;
     font-weight: 400;
-    font-style: normal;
-
-    src: url('/fonts/inter-400.woff2') format('woff2');
     font-display: swap;
-}
-
-@font-face
-{
-    font-family: 'Inter';
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: url("../fonts/inter-700.woff2") format("woff2");
+    font-style: normal;
     font-weight: 700;
-    font-style: normal;
-
-    src: url('/fonts/inter-700.woff2') format('woff2');
     font-display: swap;
-}
-
-@font-face
-{
-    font-family: 'Inter';
-    font-weight: 900;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: url("../fonts/inter-900.woff2") format("woff2");
     font-style: normal;
-
-    src: url('/fonts/inter-900.woff2') format('woff2');
-}
+    font-weight: 900;
+    font-display: swap;
+  }
 
 html
 {
@@ -74,59 +69,100 @@ body
 
 .button
 {
+    display: inline-block;
+
+    font-family: inherit;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
 
     text-align: center;
     text-decoration: none;
+    box-shadow: 0px 4px 12px rgba(45, 52, 64, .1);
 
     color: #2d3440;
+    background-color: #FCFCFC;
+
+    padding: 12px 32px;
+    outline: 4px solid rgba(252, 252, 252, .4);
+
+    border-radius: 26px;
+
+    cursor: pointer;
 }
-/* обводка у кнопки задает лишний размер - то есть она увеличивает а должна уменьшать */
-.promo-button
+
+.button:hover
+{
+    background-color: rgba(252, 252, 252, 0.4);
+
+    outline: 4px solid #FCFCFC;
+    box-shadow: 0px 4px 15px rgba(133, 133, 133, 0.15);
+}
+
+.button:focus
+{
+    background-color: #FCFCFC;
+
+    outline: 2px solid #2D3440;
+    box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button:disabled
+{
+    background-color: #E7E7E7;
+    outline: 4px solid rgba(252, 252, 252, 0.4);
+}
+
+.button-pink
 {
     display: inline-block;
 
-    box-sizing: content-box;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 12px rgba(45, 52, 64, .1);
+
+    color: #FCFCFC;
+    background-color: #FF2F64;
+
     padding: 12px 32px;
+    border: none;
+    outline: 4px solid rgba(255, 47, 100, .3);
 
-    border: 4px solid rgba(252, 252, 252, .4);
     border-radius: 26px;
-    background-color: #fcfcfc;
-    box-shadow: 0 4px 12px rgba(45, 52, 64, .1);
+
+    cursor: pointer;
 }
 
-.icon
+.button-pink:hover
 {
-    width: 16px;
-    height: 16px;
+    background-color: rgba(252, 252, 252, 0.3);
+
+    outline: 4px solid #FF2F64;
+
+    color: #2D3440;
 }
 
-.arrow-icon
+.button-pink:focus
 {
-    display: flex;
+    background: #FF2F64;
 
-    justify-content: center;
-    align-items: center;
+    outline: 2px solid #2D3440;
+    box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+
+    color: #FCFCFC;
 }
 
-.nav-icon
+.button-pink:disabled
 {
-    margin-right: 9px;
-}
-
-.search-link .nav-icon
-{
-    margin-right: 0;
-}
-
-.cart-icon
-{
-    margin: auto;
-
-    background-image: url(/images/icons/cart-icon-white.svg);
-    background-repeat: no-repeat;
+    background: #B9B9B9;
+    outline: 4px solid rgba(185, 185, 185, 0.3);
+    color: #565C66;
+    font-weight: 400;
 }
 
 .product-card-button
@@ -139,42 +175,33 @@ body
     border-radius: 26px;
     background-color: #ff2f64;
 }
-/* обводка у кнопки задает лишний размер - то есть она увеличивает а должна уменьшать b она не прозрачная */
 
-.subscribe-button
+.delivery-submit
 {
-    display: inline-block;
-
-    width: 152px;
-    margin-left: auto;
-    padding: 12px 32px;
-
-    color: #fcfcfc;
-    border: 4px solid rgba(255, 47, 100, .3);
-    border-radius: 26px;
-    background-color: #ff2f64;
-    box-shadow: 0 4px 12px rgba(45, 52, 64, .1);
+    grid-column: 1/-1;
 }
 
-/* то же самое - кнопка не встает */
-.feedback-form-button
+.filter-button
 {
-    box-sizing: border-box;
-    width: 250px;
-    margin-left: auto;
-    padding: 12px 32px;
-
-    color: #fcfcfc;
-    border: 4px solid rgba(255, 47, 100, .3);
-    border-radius: 26px;
-    background-color: #ff2f64;
-    box-shadow: 0 4px 12px rgba(45, 52, 64, .1);
+    padding: 8px 53.5px;
+    border: none;
 }
 
-.pagination-show-more
+.icon
 {
-    padding: 12px 32px;
+    width: 18px;
+    height: 18px;
 }
+
+
+.cart-icon
+{
+    margin: auto;
+
+    background-image: url(/images/icons/cart-icon-white.svg);
+    background-repeat: no-repeat;
+}
+
 
 /* HEADER */
 
@@ -193,14 +220,13 @@ body
 
 .header-logo
 {
-    margin-right: 32px;
+    margin-right: 16px;
 }
 
 .logo-image
 {
     display: block;
 }
-/* по Pixel Perfect хедер вылез вниз - пришлось задать высоту ссылке */
 
 .nav-list
 {
@@ -215,6 +241,7 @@ body
     flex-wrap: wrap;
 }
 
+
 .site-nav-list
 {
     width: 550px;
@@ -228,12 +255,35 @@ body
     text-decoration: none;
 
     color: #2d3440;
+    display: block;
 }
 
-.site-nav-item:not(:last-child)
+.site-nav-link
 {
-    margin-right: 32px;
+    padding: 8px 16px;
 }
+
+.nav-link:hover 
+{
+    background-color: rgba(252,252,252,.5);
+    border-radius: 26px;
+}
+
+/* КАк сделать эффект при нажатии? */
+.nav-link:active
+{
+    background-color: #FCFCFC;
+    outline:none;
+}
+
+.nav-link:focus 
+{
+    background-color: rgba(252,252,252,.5);
+    border-radius: 26px;
+    box-sizing: border-box;
+    outline: 2px solid #2D3440;
+}
+
 
 .user-nav-list
 {
@@ -243,22 +293,18 @@ body
 
 .user-nav-link
 {
+    position: relative;
+    display: block;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
 
-    display: flex;
-
     box-sizing: border-box;
     min-width: 32px;
     min-height: 32px;
-    padding: 6px 16px 6px 16px;
 
     border-radius: 26px;
     background-color: rgba(252, 252, 252, .3);
-
-    align-items: center;
-    justify-content: center;
 }
 
 .user-nav-item:not(:first-child)
@@ -271,17 +317,44 @@ body
     margin-left: 18px;
 }
 
-.search-link
-{
-    margin-left: 0;
-    padding: 0;
-}
-
 .header-phone-number
 {
     font-weight: 700;
 
-    display: block;
+    line-height: 20px;
+
+    text-decoration: none;
+
+    color: #2d3440;
+
+}
+
+
+.search-link .nav-icon
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    fill: #2D3440;
+}
+
+.nav-link-cart,
+.nav-link-exit
+{
+    padding: 6px 18px;
+    padding-left: 40px;
+}
+
+.nav-link-exit .nav-icon,
+.nav-link-cart .nav-icon
+{
+    position: absolute;
+    right: auto;
+    left: 16px;
+    margin: auto 0;
 }
 
 .empty-user-basket
@@ -299,54 +372,63 @@ body
     flex-grow: 1;
 }
 
+
 /* HERO SLIDER */
 
 .hero
 {
-    position: relative;
     margin-bottom: 80px;
-}
-
-.hero input[type="radio"]
-{
-    display: none;
 }
 
 .hero-wrapper
 {
     position: relative;
-    padding-top: 11px;
     overflow: hidden;
+    max-width: 1170px;
 }
 
 .hero-slide-list
 {
-    line-height: 0;
-
     display: flex;
+
+    width: 300%;
 
     margin: 0;
     padding: 0;
 
     list-style-type: none;
-    width: 300%;
-    transition: transform 0.8s ease;
+    line-height: 0;
 }
 
 .hero-slide-item
 {
     display: flex;
 
-    align-items: center;
-
     float: left;
+}
+
+.hero-slide-1
+{
+    background-color: #FEAFC3;
+}
+
+.hero-slide-2
+{
+    background-color: #69A9FF;
+}
+
+.hero-slide-3
+{
+    background-color: #FCC850;
 }
 
 .slide-information
 {
     width: 470px;
+
     margin-right: 21px;
-    margin-left: 70px;
+    padding-top: 136px;
+    padding-left: 70px;
 }
 
 .slide-header
@@ -375,59 +457,83 @@ body
 
     width: 312px;
     margin-right: 56px;
+    padding-top: 21px;
 }
 
-.next,
-.prev
+.hero-slide-1::before
+{
+    content: " ";
+    position: absolute;
+    left: 561px;
+    top: 121px;
+    width: 312px;
+    height: 312px;
+    z-index: 0;
+    background-color: #ffcbd8;
+    border-radius: 50%;
+}
+
+.hero-slide-2::before
+{
+    content: " ";
+    position: absolute;
+    left: 561px;
+    top: 121px;
+    width: 312px;
+    height: 312px;
+    z-index: -1;
+    background-color: #9FC8FF;
+    border-radius: 50%;
+}
+
+.hero-slide-3::before
+{
+    content: " ";
+    position: absolute;
+    left: 561px;
+    top: 121px;
+    width: 312px;
+    height: 312px;
+    z-index: -2;
+    background-color: #FCDC92;
+    border-radius: 50%;
+}
+
+.slider-arrow-button
 {
     position: absolute;
-
-    display: flex;
-
+    display: inline-block;
     width: 38px;
     height: 38px;
-
+    border: none;
     border: 2px solid #fcfcfc;
     border-radius: 26px;
     background-color: rgba(252, 252, 252, .3);
-
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
-.prev
+.next-button
 {
-    top: 245px;
-    left: -20px;
+    top: 258px;
+    right: -19px;
 }
 
-.next
+.prev-button
 {
-    top: 245px;
-    right: -20px;
+    top: 258px;
+    left: -19px;
 }
 
 .slide-next-images
 {
     display: flex;
+    justify-content: space-between;
 
     width: 241px;
-}
 
-.slide-image-next
-{
-    margin-right: 41px;
-}
-
-.slide-image-next,
-.slide-image-next-next
-{
-    display: block;
-}
-
-.slide-image-next
-{
-    margin-right: 41px;
+    padding-top: 204px;
+    padding-bottom: 176px;
 }
 
 .slider-footer
@@ -437,18 +543,28 @@ body
     justify-content: space-between;
 }
 
+.slider-social .slider-social-list
+{
+    width: 200px;
+    justify-content: flex-end;
+    margin-left: 0;
+}
+
+/* TOGGLERS */
+
+
 .slider-togglers
 {
     display: flex;
 
+    align-items: flex-end;
+
     margin: 0;
-    margin-right: 8px;
     padding: 0;
 
     list-style-type: none;
 
-    justify-content: flex-start;
-    text-align: center;
+    line-height: 0;
 }
 
 .slider-togglers-item:not(:last-child)
@@ -456,36 +572,24 @@ body
     margin-right: 8px;
 }
 
-.slider-togglers label
+.slider-toggler-button
 {
     display: inline-block;
+
     width: 12px;
     height: 12px;
-    cursor: pointer;
+    border: none;
+
     border-radius: 50%;
     background-color: rgba(252, 252, 252, 0.3);
+
+    cursor: pointer; 
 }
 
-#slide-1:checked ~ .hero-wrapper .slider-footer .slider-togglers .slider-togglers-item label[for="slide-1"],
-#slide-2:checked ~ .hero-wrapper .slider-footer .slider-togglers .slider-togglers-item label[for="slide-2"],
-#slide-3:checked ~ .hero-wrapper .slider-footer .slider-togglers .slider-togglers-item label[for="slide-3"]
- {  
+.slider-togglers-item .current-button
+{  
     background-color: rgba(252, 252, 252);
 }
-
-#slide-1:checked ~ .hero-wrapper .hero-slide-list .hero-slide-1 {
-    transform: translate(0);
-  }
-
-  #slide-2:checked ~ .hero-wrapper .hero-slide-list .hero-slide-2 {
-    transform: translate(-1170px);
-  }
-
-  #slide-3:checked ~ .hero-wrapper .hero-slide-list .hero-slide-3 {
-    transform: translate(-2340px);
-  }
-
-
 
 /* SHOP PROMO */
 
@@ -725,18 +829,16 @@ body
 
     justify-content: space-between;
     flex-wrap: wrap;
-    align-content: space-between;
+
+    list-style-type: none;
 }
 
 .advantages-item
 {
     display: flex;
+    position: relative;
 
     width: 506px;
-
-    list-style-type: none;
-
-    justify-content: flex-start;
 }
 
 .advantages-item:nth-child(1),
@@ -745,19 +847,68 @@ body
     margin-bottom: 40px;
 }
 
-.advantages-icon
-{
-    display: block;
-
-    margin-right: 16px;
-}
 
 .advantages-item p
 {
     margin: 0;
+    padding: 0;
 
     color: #565c66;
+    padding-left: 64px;
 }
+
+.advantages-item::before 
+{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.advantages-item::after
+{
+    content: " ";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border: 2px solid #2d3440;
+    border-radius: 50%;
+}
+
+
+.pop-item::before
+{
+    background-image: url("../images/icons/pop-icon.svg");
+    top: 8px;
+    left: 8px;
+}
+
+.cow-item:before
+{
+    background-image: url(../images/icons/cow-icon.svg);
+    top: 8px;
+    left: 8px;
+}
+
+.leaf-item:before
+{
+    background-image: url(../images/icons/leaf-icon.svg);
+    top: 8px;
+    left: 8px;
+}
+
+.thermometer-item:before
+{
+    background-image: url(../images/icons/thermometer-icon.svg);
+    top: 8px;
+    left: 8px;
+}
+
 
 /* news*/
 
@@ -867,8 +1018,9 @@ body
     padding-right: 160px;
     padding-bottom: 14px;
     padding-left: 16px;
+    border: none;
 
-    border: 1px solid #b9b9b9;
+    outline: 1px solid #B9B9B9;
     border-radius: 4px;
     background-color: #fff;
 }
@@ -1085,16 +1237,21 @@ body
     list-style-type: none;
 }
 
-.footer-social-item
+.footer-social-item:not(:last-child)
 {
-    width: 24px;
-    height: 24px;
     margin-right: 16px;
 }
 
-.footer-social-item:last-child
+.social-btn
 {
-    margin-right: 0;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin:0;
+    padding: 0;
+    border: none;
+    outline: 2px solid rgba(252, 252, 252, 0.2);
+    border-radius: 100px;
 }
 
 .footer-navigation
@@ -1422,7 +1579,3 @@ legend
     opacity: .2;
 }
 
-.pagination-show-more
-{
-    width: 179px;
-}
