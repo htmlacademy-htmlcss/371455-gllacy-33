@@ -40,12 +40,16 @@
                 </svg>
                 <span class="visually-hidden">Поиск по сайту.</span>
               </a>
-              <form  class="search-form visually-hidden" action="https://echo.htmlacademy.ru" method="get"> 
-                <p class="input-wrapper">
-                  <input class="input-field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-                  <label class="visually-hidden" for="search-field"></label>
-                </p>
-              </form>
+              <!-- <div class="popover popover-search">
+                <div class="popover-content search-content">
+                  <form  class="search-form" action="https://echo.htmlacademy.ru" method="get"> 
+                    <p class="input-wrapper">
+                      <input class="field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+                      <label class="visually-hidden" for="search-field"></label>
+                    </p>
+                  </form>
+                </div>
+              </div> -->
             </li>
 
 
@@ -108,18 +112,20 @@
               <div class="slide-main-image">
                 <!-- Нужно ли тут задавать alt картинке главной если рядом есть название этого мороженного в текстовом блоке? -->
                 <img class="slide-image" src="images/slide-1/slide1-big-icecream.png" width="312" height="507" alt="Пломбир с клубничным джемом.">
-                <button class="slider-arrow-button prev-button">
-                  <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
-                  </svg>
-                  <span class="visually-hidden">Предыдущий слайд.</span>
-                </button>
-                <button class="slider-arrow-button next-button">
-                  <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
-                  </svg>
-                  <span class="visually-hidden">Следующий слайд.</span>
-                </button>
+                <div class="slider-controls">
+                  <button class="slider-arrow-button prev-button">
+                    <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
+                    </svg>
+                    <span class="visually-hidden">Предыдущий слайд.</span>
+                  </button>
+                  <button class="slider-arrow-button next-button">
+                    <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
+                    </svg>
+                    <span class="visually-hidden">Следующий слайд.</span>
+                  </button>
+                </div>
               </div>
               <div class="slide-next-images">
                 <img class="slide-image-next" src="images/slide-1/slide1-next.png" width="100" height="150" alt="Сливочное мороженое со вкусом банана.">
@@ -135,18 +141,20 @@
               </div>
               <div class="slide-main-image">
                 <img class="slide-image" src="images/slide-2/slide2-big-icecream.png" width="312" height="507" alt="Сливочное мороженое со вкусом банана.">
-                <button class="slider-arrow-button prev-button">
-                  <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
-                  </svg>
-                  <span class="visually-hidden">Предыдущий слайд.</span>
-                </button>
-                <button class="slider-arrow-button next-button">
-                  <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
-                  </svg>
-                  <span class="visually-hidden">Следующий слайд.</span>
-                </button>
+                <div class="slider-controls">
+                  <button class="slider-arrow-button prev-button">
+                    <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
+                    </svg>
+                    <span class="visually-hidden">Предыдущий слайд.</span>
+                  </button>
+                  <button class="slider-arrow-button next-button">
+                    <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
+                    </svg>
+                    <span class="visually-hidden">Следующий слайд.</span>
+                  </button>
+                </div>
               </div>
               <div class="slide-next-images">
                 <img class="slide-image-next" src="images/slide-2/slide2-next.png" width="100" height="150" alt="Карамельный пломбир с маршмеллоу.">
@@ -161,19 +169,20 @@
                 <a class="button" type="button" href="#">Заказать</a>
               </div>
               <div class="slide-main-image">
-                <img class="slide-image" src="images/slide-3/slide3-big-icecream.png" width="312" height="507" alt="Карамельный пломбир с маршмеллоу.">
-                <button class="slider-arrow-button prev-button">
-                  <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
-                  </svg>
-                  <span class="visually-hidden">Предыдущий слайд.</span>
-                </button>
-                <button class="slider-arrow-button next-button">
-                  <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
-                  </svg>
-                  <span class="visually-hidden">Следующий слайд.</span>
-                </button>
+                <div class="slider-controls">
+                  <button class="slider-arrow-button prev-button">
+                    <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
+                    </svg>
+                    <span class="visually-hidden">Предыдущий слайд.</span>
+                  </button>
+                  <button class="slider-arrow-button next-button">
+                    <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
+                    </svg>
+                    <span class="visually-hidden">Следующий слайд.</span>
+                  </button>
+                </div>
               </div>
               <div class="slide-next-images">
                 <img class="slide-image-next" src="images/slide-3/slide3-next.png" width="100" height="150" alt="Пломбир с клубничным джемом.">
@@ -185,7 +194,7 @@
           <div class="slider-footer">
             <ol class="slider-togglers">
               <li class="slider-togglers-item">
-                <button class="slider-toggler-button current-button">
+                <button class="slider-toggler-button current-toggler-button">
                   <span class="visually-hidden">Первый слайд.</span>
                 </button>
               </li>
@@ -200,7 +209,6 @@
                 </button>
              </li>
             </ol> 
-<!-- почему то блок выше чем иконка и изза этого все сдвигается -->
             <div class="slider-social">
               <h2 class="visually-hidden">Мы в социальных сетях.</h2>
               <ul class="footer-social-list slider-social-list">
@@ -365,7 +373,7 @@
           <div class="subscribtion-base">
             <p class="subscribtion-description">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/" aria-label="Форма подписки на рассылку">
-              <input class="input-field subscribtion-input" type="email" name="subscribe-email" id="sub-email" placeholder="email@example.com" required>
+              <input class="field subscribtion-input" type="email" name="subscribe-email" id="sub-email" placeholder="email@example.com" required>
               <label for="sub-email visually-hidden"></label>
               <button class="button-pink" type="submit">Отправить</button>
           </form>
@@ -383,11 +391,17 @@
             <p class="delivery-description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
             <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="field-group delivery-form-date">
-                <label class="form-label" for="delivery-date">Дата
-                  <button class="info">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                  </button>
-                </label>
+                <span class="form-label form-label-icon">
+                  <label class="form-label" for="delivery-date">Дата</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.13a4.88 4.88 0 1 0 0 9.75 4.88 4.88 0 0 0 0-9.75ZM.8 7a6.2 6.2 0 1 1 12.4 0A6.2 6.2 0 0 1 .8 7ZM7 6.33c.37 0 .67.3.67.67v2.22a.67.67 0 0 1-1.34 0V7c0-.37.3-.67.67-.67Zm0-2.21a.67.67 0 0 0 0 1.33.67.67 0 0 0 0-1.33Z"/>
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите дату доставки, мы свяжемся с вами, чтобы подтвердить заказ.</span>
+                  </span>
+                </span>
                 <input class="field" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020">
               </p>
               <p class="field-group delivery-form-phone">
@@ -395,11 +409,17 @@
                 <input class="field" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00">
               </p>
               <p class="field-group delivery-form-address">
-                <label class="form-label" for="delivery-address">Адрес
-                  <button class="info">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                  </button>
-                </label>
+                <span class="form-label form-label-icon">
+                  <label class="form-label" for="delivery-address">Адрес</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.13a4.88 4.88 0 1 0 0 9.75 4.88 4.88 0 0 0 0-9.75ZM.8 7a6.2 6.2 0 1 1 12.4 0A6.2 6.2 0 0 1 .8 7ZM7 6.33c.37 0 .67.3.67.67v2.22a.67.67 0 0 1-1.34 0V7c0-.37.3-.67.67-.67Zm0-2.21a.67.67 0 0 0 0 1.33.67.67 0 0 0 0-1.33Z"/>
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Введите название улицы, дома и квартиры.</span>
+                  </span>
+                </span>
                 <input class="field" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
               </p>
               <button class="button-pink delivery-submit" type="submit">Отправить</button>
@@ -420,19 +440,6 @@
               <p class="company-shedule">(с 10 до 20 ежедневно)</p>
             </address>
             <a class="button-pink" href="#">Форма обратной связи</a>
-            <form class="feedback-form visually-hidden" action="https://echo.htmlacademy.ru/" method="post">
-              <h3>Мы обязательно ответим вам!</h3>
-              <p>
-                <input type="text" name="customer-name" placeholder="Имя и фамилия">
-              </p>
-              <p>
-                <input type="email" name="customer-email" placeholder="email@example.com">
-              </p>
-              <p>
-                <textarea name="customer-feedback" rows="3" placeholder="В свободной форме"></textarea>
-              </p>
-              <button class="button-pink" type="submit">Отправить</button>
-            </form>
           </div>
         </div>
       </section>
@@ -490,5 +497,31 @@
         </section>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal-feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть окно.</span>
+        </button>
+        <section class="modal-content">
+          <h3 class="modal-title">Мы обязательно ответим вам!</h3>
+          <form class="modal-feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group"> 
+              <input class="field" id="name-field" type="text" name="customer-name" placeholder="Имя и фамилия" required>
+              <label class="visually-hidden" for="name-field"></label>
+            </p>
+            <p class="field-group">
+              <input class="field" id="email-field" type="email" name="customer-email" placeholder="email@example.com" required>
+              <label for="email-field" class="visually-hidden"></label>
+            </p>
+            <p class="field-group">
+              <textarea class="field" name="customer-feedback" rows="5" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button-pink modal-button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
