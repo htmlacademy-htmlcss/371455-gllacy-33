@@ -63,10 +63,10 @@
                 <div class="popover-content search-content">
                   <form  class="search-form" action="https://echo.htmlacademy.ru" method="get"> 
                     <p class="input-wrapper">
+                      <label class="visually-hidden" for="search-field">Поиск по сайту</label>
                       <input class="field popover-field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-                      <label class="visually-hidden" for="search-field"></label>
-                      <button class="search-close-button" type="reset">
-                        <span class="visually-hidden">Удалить из корзины.</span>
+                      <button class="search-cancel-button" type="reset">
+                        <span class="visually-hidden">Удалить.</span>
                       </button>
                     </p>
                   </form>
@@ -86,12 +86,12 @@
                   <h2 class="popover-title">Личный кабинет</h2>
                   <form class="user-login-form" action="https://echo.htmlacademy.ru" method="get">
                     <p class="input-wrapper">
+                      <label class="visually-hidden" for="header-email">Электронный адрес</label>
                       <input class="field popover-field" type="email" name="email" id="header-email" placeholder="email@example.com" required>
-                      <label class="visually-hidden" for="header-email"></label>
                     </p>
                     <p class="input-wrapper">
+                      <label class="visually-hidden" for="header-password">Пароль</label>
                       <input class="field popover-field" type="password" name="password" id="header-password" placeholder="Пароль" required>
-                      <label class="visually-hidden" for="header-password"></label>
                     </p>
                     <div class="user-login-footer">
                       <button type="submit" class="button-pink login-button">Войти</button>

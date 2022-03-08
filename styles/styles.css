@@ -461,8 +461,12 @@ img {
   width: 356px;
 }
 
-.search-close-button {
-  /* display: none; */
+.search-cancel-button {
+  position: absolute;
+  top: 38px;
+  right: 29px;
+
+  display: none;
 
   width: 20px;
   height: 20px;
@@ -478,22 +482,11 @@ img {
   background-position: center;
 }
 
-input[type="search" i]::-webkit-search-close-button {
+.popover-field::-webkit-search-cancel-button {
   display: none;
 }
 
-body input::-webkit-search-decoration,
-body input::-webkit-search-cancel-button,
-body input::-webkit-search-results-button,
-body input::-webkit-search-results-decoration {
-  display: none;
-}
-
-.popover-field:not(:placeholder-shown) + .search-close-button {
-  position: absolute;
-  top: 38px;
-  right: 29px;
-
+.popover-field:not(:placeholder-shown) + .search-cancel-button {
   display: block;
 }
 
