@@ -87,9 +87,12 @@ img {
   text-decoration: none;
 
   color: #2d3440;
-  border: none;
+
+  border: 4px solid rgba(252, 252, 252, 0.4);
+  box-sizing: border-box;
   border-radius: 26px;
-  outline: 4px solid rgba(252, 252, 252, 0.4);
+  transform: translateZ(0);
+
   background-color: #fcfcfc;
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
 }
@@ -128,9 +131,8 @@ img {
   text-decoration: none;
 
   color: #fcfcfc;
-  border: none;
   border-radius: 26px;
-  outline: 4px solid rgba(255, 47, 100, 0.3);
+  border: 4px solid rgba(255, 47, 100, 0.3);
   background-color: #ff2f64;
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
 }
@@ -295,6 +297,9 @@ img {
 /* SUBCATALOG */
 
 .site-nav-item:focus-within .site-nav-subcatalog {
+  display: block;
+}
+.site-nav-item:hover .site-nav-subcatalog {
   display: block;
 }
 
@@ -1000,7 +1005,7 @@ img {
 .popular-flavors-title {
   width: 527px;
   margin: 0 auto;
-  margin-bottom: 107px;
+  margin-bottom: 16px;
 }
 
 .popular-flavors-wrapper {
@@ -1019,6 +1024,7 @@ img {
   color: #2d3440;
   border-radius: 8px;
   background-color: #fcfcfc;
+  margin-top: 91px;
 }
 
 .product-card:nth-child(4n) {
