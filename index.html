@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
   </head>
 
   <body>
@@ -18,6 +19,23 @@
           <ul class="nav-list site-nav-list">
             <li class="nav-item site-nav-item">
               <a class="nav-link site-nav-link" href="catalog.html">Каталог</a>
+              <ul class="site-nav-subcatalog">
+                <li class="subcatalog-item subcatalog-promo-item">
+                  <a class="subcatalog-link subcatalog-promo-link" href="#">Новинки</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Сливочное</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Щербеты</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Мелорин</a>
+                </li>
+              </ul>
             </li>
             <li class="nav-item site-nav-item">
               <a class="nav-link site-nav-link" href="#">Доставка и оплата</a>
@@ -26,7 +44,7 @@
               <a class="nav-link site-nav-link" href="#">О компании</a>
             </li>
           </ul>
-          
+
           <ul class="nav-list user-nav-list">
             <li class="nav-item user-nav-item">
               <a class="header-phone-number" href="tel:+78005558628">+7 800 555-86-28
@@ -40,14 +58,20 @@
                 </svg>
                 <span class="visually-hidden">Поиск по сайту.</span>
               </a>
-              <form  class="search-form visually-hidden" action="https://echo.htmlacademy.ru" method="get"> 
-                <p class="input-wrapper">
-                  <input class="input-field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-                  <label class="visually-hidden" for="search-field"></label>
-                </p>
-              </form>
+              <div class="popover popover-search">
+                <div class="popover-content search-content">
+                  <form  class="search-form" action="https://echo.htmlacademy.ru" method="get"> 
+                    <p class="input-wrapper">
+                      <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+                      <input class="field popover-field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+                      <button class="search-cancel-button" type="reset">
+                        <span class="visually-hidden">Удалить.</span>
+                      </button>
+                    </p>
+                  </form>
+                </div>
+              </div>
             </li>
-
 
             <li class="nav-item user-nav-item">
               <a class="nav-link user-nav-link nav-link-exit" href="#">
@@ -56,26 +80,29 @@
                 </svg>
                 Вход
               </a>
-              <div class="user-login visually-hidden">
-                <form class="user-login-form" action="https://echo.htmlacademy.ru" method="get">
-                  <h2 class="user-login-popup-name">Личный кабинет</h2>
-                  <p>
-                    <input class="input-field" type="email" name="email" id="header-email" placeholder="email@example.com" required>
-                    <label class="visually-hidden" for="header-email"></label>
-                  </p>
-                  <p>
-                    <input class="input-field" type="password" name="password" id="header-password" placeholder="Пароль" required>
-                    <label class="visually-hidden" for="header-password"></label>
-                  </p>
-                  <div class="user-login-footer">
-                    <button type="submit" class="login-button">Войти</button>
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Регистрация</a>
-                  </div>  
-                </form>
+              <div class="popover popover-login">
+                <div class="popover-content user-login">
+                  <h2 class="popover-title">Личный кабинет</h2>
+                  <form class="user-login-form" action="https://echo.htmlacademy.ru" method="get">
+                    <p class="input-wrapper">
+                      <label class="visually-hidden" for="header-email">Электронный адрес</label>
+                      <input class="field popover-field" type="email" name="email" id="header-email" placeholder="email@example.com" required>
+                    </p>
+                    <p class="input-wrapper">
+                      <label class="visually-hidden" for="header-password">Пароль</label>
+                      <input class="field popover-field" type="password" name="password" id="header-password" placeholder="Пароль" required>
+                    </p>
+                    <div class="user-login-footer">
+                      <button type="submit" class="button-pink login-button">Войти</button>
+                      <p class="login-form-links">
+                        <a href="#">Забыли пароль?</a>
+                        <a href="#">Регистрация</a>
+                      </p>
+                    </div>  
+                  </form>
+                </div>
               </div>
             </li>
-
 
             <li class="nav-item user-nav-item">
               <a class="nav-link user-nav-link nav-link-cart" href="#">
@@ -84,8 +111,10 @@
                 </svg>
                 Пусто
               </a>
-              <div class="empty-user-basket visually-hidden">
-                <p>Ваша корзина пока пуста</p>
+              <div class="popover popover-user-basket">
+                <div class="popover-content empty-user-basket">
+                  <h3 class="popover-title">Ваша корзина пока пуста</h3>
+                </div>
               </div>
             </li>
           </ul>
@@ -103,23 +132,24 @@
               <div class="slide-information">
                 <h2 class="slide-header">Нежный пломбир с&nbsp;клубничным джемом</h2>
                 <p>Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-                <a class="button" type="button" href="#">Заказать</a>
+                <a class="button" href="#">Заказать</a>
               </div>
               <div class="slide-main-image">
-                <!-- Нужно ли тут задавать alt картинке главной если рядом есть название этого мороженного в текстовом блоке? -->
                 <img class="slide-image" src="images/slide-1/slide1-big-icecream.png" width="312" height="507" alt="Пломбир с клубничным джемом.">
-                <button class="slider-arrow-button prev-button">
-                  <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
-                  </svg>
-                  <span class="visually-hidden">Предыдущий слайд.</span>
-                </button>
-                <button class="slider-arrow-button next-button">
-                  <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
-                  </svg>
-                  <span class="visually-hidden">Следующий слайд.</span>
-                </button>
+                <div class="slider-controls">
+                  <button class="slider-arrow-button prev-button">
+                    <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
+                    </svg>
+                    <span class="visually-hidden">Предыдущий слайд.</span>
+                  </button>
+                  <button class="slider-arrow-button next-button">
+                    <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
+                    </svg>
+                    <span class="visually-hidden">Следующий слайд.</span>
+                  </button>
+                </div>
               </div>
               <div class="slide-next-images">
                 <img class="slide-image-next" src="images/slide-1/slide1-next.png" width="100" height="150" alt="Сливочное мороженое со вкусом банана.">
@@ -135,18 +165,20 @@
               </div>
               <div class="slide-main-image">
                 <img class="slide-image" src="images/slide-2/slide2-big-icecream.png" width="312" height="507" alt="Сливочное мороженое со вкусом банана.">
-                <button class="slider-arrow-button prev-button">
-                  <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
-                  </svg>
-                  <span class="visually-hidden">Предыдущий слайд.</span>
-                </button>
-                <button class="slider-arrow-button next-button">
-                  <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
-                  </svg>
-                  <span class="visually-hidden">Следующий слайд.</span>
-                </button>
+                <div class="slider-controls">
+                  <button class="slider-arrow-button prev-button">
+                    <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
+                    </svg>
+                    <span class="visually-hidden">Предыдущий слайд.</span>
+                  </button>
+                  <button class="slider-arrow-button next-button">
+                    <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
+                    </svg>
+                    <span class="visually-hidden">Следующий слайд.</span>
+                  </button>
+                </div>
               </div>
               <div class="slide-next-images">
                 <img class="slide-image-next" src="images/slide-2/slide2-next.png" width="100" height="150" alt="Карамельный пломбир с маршмеллоу.">
@@ -158,22 +190,23 @@
               <div class="slide-information">
                 <h2 class="slide-header">Карамельный пломбир с маршмеллоу</h2>
                 <p>Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
-                <a class="button" type="button" href="#">Заказать</a>
+                <a class="button" href="#">Заказать</a>
               </div>
               <div class="slide-main-image">
-                <img class="slide-image" src="images/slide-3/slide3-big-icecream.png" width="312" height="507" alt="Карамельный пломбир с маршмеллоу.">
-                <button class="slider-arrow-button prev-button">
-                  <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
-                  </svg>
-                  <span class="visually-hidden">Предыдущий слайд.</span>
-                </button>
-                <button class="slider-arrow-button next-button">
-                  <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
-                  </svg>
-                  <span class="visually-hidden">Следующий слайд.</span>
-                </button>
+                <div class="slider-controls">
+                  <button class="slider-arrow-button prev-button">
+                    <svg class="prev" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L5.6 8l4.2-4.2Z"/>
+                    </svg>
+                    <span class="visually-hidden">Предыдущий слайд.</span>
+                  </button>
+                  <button class="slider-arrow-button next-button">
+                    <svg class="next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
+                    </svg>
+                    <span class="visually-hidden">Следующий слайд.</span>
+                  </button>
+                </div>
               </div>
               <div class="slide-next-images">
                 <img class="slide-image-next" src="images/slide-3/slide3-next.png" width="100" height="150" alt="Пломбир с клубничным джемом.">
@@ -185,7 +218,7 @@
           <div class="slider-footer">
             <ol class="slider-togglers">
               <li class="slider-togglers-item">
-                <button class="slider-toggler-button current-button">
+                <button class="slider-toggler-button current-toggler-button">
                   <span class="visually-hidden">Первый слайд.</span>
                 </button>
               </li>
@@ -200,7 +233,6 @@
                 </button>
              </li>
             </ol> 
-<!-- почему то блок выше чем иконка и изза этого все сдвигается -->
             <div class="slider-social">
               <h2 class="visually-hidden">Мы в социальных сетях.</h2>
               <ul class="footer-social-list slider-social-list">
@@ -234,30 +266,30 @@
         <h2 class="visually-hidden">Промоакции магазина.</h2>  
         <p class="section-title promo-title">Заказывайте мороженое и получайте подарки!</p>
         <div class="promo-wrapper wrapper">
+          
           <div class="raspberry-promo promo">
             <div class="promo-text">
               <h3>Малинка даром!</h3>
               <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>        
             </div>
-            <a class="button" href="#">Хочу подарок</a>
+            <a class="button button-promo" href="#">Хочу подарок</a>
           </div>
           <div class="marshmallow-promo promo">
             <div class="promo-text">
               <h3>Маршмеллоу даром!</h3>
               <p>При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
             </div>
-            <a class="button" href="#">Хочу подарок</a>
+            <a class="button button-promo" href="#">Хочу подарок</a>
           </div>
         </div>
       </section>
-    
       <section class="popular-flavors">
         <h2 class="visually-hidden">Популярные вкусы мороженного.</h2>
         <p class="section-title popular-flavors-title">Попробуйте самые популярные вкусы нашего мороженого</p>
         <div class="popular-flavors-wrapper wrapper">
           <article class="product-card">
             <a class="product-card-link product-image-link" href="#">
-              <img class="product-card-image" src="images/product-cards/product-card-raspberry-photo.jpg" alt="Малинка.">
+              <img class="product-card-image" src="images/product-cards/product-card-raspberry-photo.jpg" alt="Мороженое сорта Малина с малиновым джемом.">
             </a>
             <div class="product-card-content">
               <a class="product-card-link" href="#">
@@ -272,11 +304,9 @@
               </div>
             </div>
           </article>
-
           <article class="product-card">
             <a class="product-card-link product-image-link" href="#">
-              <!-- Нужно ли тут прописывать alt - ибо по сути он повторяет название карточки -->
-              <img class="product-card-image" src="images/product-cards/product-card-pistachio-photo.jpg" alt="Фисташка.">
+              <img class="product-card-image" src="images/product-cards/product-card-pistachio-photo.jpg" alt="Мороженое сорта Фисташка с кусочками шоколада.">
             </a>
             <div class="product-card-content">
               <a class="product-card-link" href="#">
@@ -294,7 +324,7 @@
 
           <article class="product-card">
             <a class="product-card-link product-image-link" href="#">
-              <img class="product-card-image" src="images/product-cards/product-card-blueberry-photo.jpg" alt="Черника.">
+              <img class="product-card-image" src="images/product-cards/product-card-blueberry-photo.jpg" alt="Мороженое сорта Черника с джемом.">
             </a>
             <div class="product-card-content">
               <a class="product-card-link" href="#">
@@ -312,7 +342,7 @@
 
           <article class="product-card">
             <a class="product-card-link product-image-link" href="#">
-              <img class="product-card-image" src="images/product-cards/product-card-bubblegum-photo.jpg" alt="Бабл-гам.">
+              <img class="product-card-image" src="images/product-cards/product-card-bubblegum-photo.jpg" alt="Мороженое со вкусом Бабл-гам с посыпкой.">
             </a>
             <div class="product-card-content">
               <a class="product-card-link" href="#">
@@ -365,8 +395,8 @@
           <div class="subscribtion-base">
             <p class="subscribtion-description">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/" aria-label="Форма подписки на рассылку">
-              <input class="input-field subscribtion-input" type="email" name="subscribe-email" id="sub-email" placeholder="email@example.com" required>
-              <label for="sub-email visually-hidden"></label>
+              <label class="visually-hidden" for="sub-email">Электронный адрес</label>
+              <input class="field subscribtion-input" type="email" name="subscribe-email" id="sub-email" placeholder="email@example.com" required>
               <button class="button-pink" type="submit">Отправить</button>
           </form>
           </div>
@@ -383,11 +413,17 @@
             <p class="delivery-description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
             <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="field-group delivery-form-date">
-                <label class="form-label" for="delivery-date">Дата
-                  <button class="info">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                  </button>
-                </label>
+                <span class="form-label form-label-icon">
+                  <label class="form-label" for="delivery-date">Дата</label>
+                  <span class="tooltip" id="tooltip-label">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.13a4.88 4.88 0 1 0 0 9.75 4.88 4.88 0 0 0 0-9.75ZM.8 7a6.2 6.2 0 1 1 12.4 0A6.2 6.2 0 0 1 .8 7ZM7 6.33c.37 0 .67.3.67.67v2.22a.67.67 0 0 1-1.34 0V7c0-.37.3-.67.67-.67Zm0-2.21a.67.67 0 0 0 0 1.33.67.67 0 0 0 0-1.33Z"/>
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip">Укажите дату доставки, мы свяжемся с вами, чтобы подтвердить заказ.</span>
+                  </span>
+                </span>
                 <input class="field" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020">
               </p>
               <p class="field-group delivery-form-phone">
@@ -395,11 +431,17 @@
                 <input class="field" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00">
               </p>
               <p class="field-group delivery-form-address">
-                <label class="form-label" for="delivery-address">Адрес
-                  <button class="info">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                  </button>
-                </label>
+                <span class="form-label form-label-icon">
+                  <label class="form-label" for="delivery-address">Адрес</label>
+                  <span class="tooltip" id="tooltip-label">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.13a4.88 4.88 0 1 0 0 9.75 4.88 4.88 0 0 0 0-9.75ZM.8 7a6.2 6.2 0 1 1 12.4 0A6.2 6.2 0 0 1 .8 7ZM7 6.33c.37 0 .67.3.67.67v2.22a.67.67 0 0 1-1.34 0V7c0-.37.3-.67.67-.67Zm0-2.21a.67.67 0 0 0 0 1.33.67.67 0 0 0 0-1.33Z"/>
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip">Введите название улицы, дома и квартиры.</span>
+                  </span>
+                </span>
                 <input class="field" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
               </p>
               <button class="button-pink delivery-submit" type="submit">Отправить</button>
@@ -419,20 +461,7 @@
               <a class="company-phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
               <p class="company-shedule">(с 10 до 20 ежедневно)</p>
             </address>
-            <a class="button-pink" href="#">Форма обратной связи</a>
-            <form class="feedback-form visually-hidden" action="https://echo.htmlacademy.ru/" method="post">
-              <h3>Мы обязательно ответим вам!</h3>
-              <p>
-                <input type="text" name="customer-name" placeholder="Имя и фамилия">
-              </p>
-              <p>
-                <input type="email" name="customer-email" placeholder="email@example.com">
-              </p>
-              <p>
-                <textarea name="customer-feedback" rows="3" placeholder="В свободной форме"></textarea>
-              </p>
-              <button class="button-pink" type="submit">Отправить</button>
-            </form>
+            <a class="button-pink contact-button" href="#">Форма обратной связи</a>
           </div>
         </div>
       </section>
@@ -465,7 +494,7 @@
           <h2 class="visually-hidden">Дополнительно о нас</h2>
           <ul class="footer-list">
             <li class="footer-item heart-icon-item">
-              <img class="heart-icon" src="/images/icons/heart-icon.svg"></img>
+              <img class="heart-icon" src="images/icons/heart-icon.svg" alt="Иконка сердечко.">
               <a class="footer-nav-link" href="#"><b>Для поставщиков</b></a>
             </li>
             <li class="footer-item">
@@ -483,12 +512,38 @@
         <section class="copyright">
           <h2 class="visually-hidden">Авторские права</h2>
           <a href="https://htmlacademy.ru/">
-            <img class="htmlacademy-logo" src="/images/logo_htmlacademy.svg" width= "93" height="27" alt="HTML-Academy logo">
+            <img class="htmlacademy-logo" src="images/logo_htmlacademy.svg" width= "93" height="27" alt="HTML-Academy logo">
             <span class="visually-hidden">Логотип HTML Academy</span>
           </a>
           <p class="copyright-text">Сделано в <a href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
         </section>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal-feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть окно.</span>
+        </button>
+        <section class="modal-content">
+          <h3 class="modal-title">Мы обязательно ответим вам!</h3>
+          <form class="modal-feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group"> 
+              <label class="visually-hidden" for="name-field">Имя и Фамилия</label>
+              <input class="field" id="name-field" type="text" name="customer-name" placeholder="Имя и фамилия" required>
+            </p>
+            <p class="field-group">
+              <label for="email-field" class="visually-hidden">Электронный адрес</label>
+              <input class="field" id="email-field" type="email" name="customer-email" placeholder="email@example.com" required>
+            </p>
+            <p class="field-group">
+              <textarea class="field" name="customer-feedback" rows="5" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button-pink modal-button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
